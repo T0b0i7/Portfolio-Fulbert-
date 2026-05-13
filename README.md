@@ -10,13 +10,15 @@ Portfolio professionnel de GOUDALO Ozias Fulbert, développeur full-stack et sp�
 
 ## ✨ Fonctionnalités
 
-- **Design moderne et responsive** - Interface épurée avec animations fluides
+- **Design moderne et responsive** - Interface épurée avec animations fluides optimisée pour mobile, tablette et desktop
 - **Section Hero** - Présentation personnelle avec navigation rapide
-- **À propos** - Parcours professionnel et formation détaillée
-- **Projets** - Galerie de projets en cybersécurité et développement
-- **Compétences** - Stack technique organisée par catégorie
-- **Contact** - Formulaire de contact avec infos directes
-- **Mode sombre** - Thème dark élégant
+- **À propos** - Parcours professionnel et formation détaillée avec timeline responsive
+- **Projets** - Galerie de 6 projets en cybersécurité/développment avec cards adaptatives
+- **Compétences** - Stack technique organisée par catégorie avec icônes responsive
+- **Contact** - Formulaire de contact avec infos directes, entièrement mobile-friendly
+- **Mode sombre** - Thème dark élégant par défaut
+- **Performance** - Chargement rapide, animations optimisées pour mobile
+- **Accessibilité** - Support des préférences réduites de mouvement, contraste élevé, zones de touche suffisantes
 
 ## 🛠️ Technologies utilisées
 
