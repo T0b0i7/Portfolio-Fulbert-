@@ -166,3 +166,52 @@
 		font-size: 0.9rem;
 	}
 }
+
+@media (max-width: 480px) {
+	.contact {
+		padding: 40px 10px;
+	}
+	
+	.contact-content {
+		gap: 25px;
+	}
+	
+	.contact-item {
+		padding: 10px;
+	}
+	
+	.contact-item h3 {
+		font-size: 0.9rem;
+	}
+	
+	.contact-item p {
+		font-size: 0.85rem;
+	}
+	
+	.contact-form {
+		padding: 12px;
+	}
+	
+	.form-group {
+		margin-bottom: 12px;
+	}
+	
+	.form-group label {
+		font-size: 0.85rem;
+		margin-bottom: 6px;
+	}
+	
+	.form-group input, .form-group textarea {
+		padding: 10px 12px;
+		font-size: 0.9rem;
+	}
+	
+	.form-group textarea {
+		min-height: 100px;
+	}
+	
+	.submit-btn {
+		padding: 10px 14px;
+		font-size: 0.85rem;
+	}
+}

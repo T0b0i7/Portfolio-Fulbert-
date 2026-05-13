@@ -81,3 +81,53 @@
 .floating-btn.sec > span {
 	background-color: var(--accentHi);
 }
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+	.floating-btn.first {
+		top: 8%;
+		left: 10%;
+	}
+	
+	.floating-btn.sec {
+		bottom: 12%;
+		right: 10%;
+	}
+	
+	.floating-btn, .floating-btn div {
+		height: 45px;
+		width: 130px;
+	}
+	
+	.floating-btn div {
+		font-size: 0.85rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.floating-btn.first {
+		top: 5%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	
+	.floating-btn.sec {
+		bottom: 5%;
+		right: 50%;
+		transform: translateX(50%);
+	}
+	
+	.floating-btn, .floating-btn div {
+		height: 40px;
+		width: 110px;
+	}
+	
+	.floating-btn div {
+		font-size: 0.75rem;
+	}
+	
+	.floating-btn span {
+		width: 70px;
+		height: 40px;
+	}
+}

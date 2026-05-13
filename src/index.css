@@ -125,3 +125,30 @@ hr:before {
 		font-size: 1.5rem;
 	}
 }
+
+/* Mobile Tablet Optimizations */
+@media screen and (max-width: 768px) {
+	.container {
+		max-width: 100%;
+		padding: 0 15px;
+	}
+	
+	p {
+		font-size: 1.3rem;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.container {
+		max-width: 100%;
+		padding: 0 10px;
+	}
+	
+	p {
+		font-size: 1.1rem;
+	}
+	
+	body {
+		font-size: 0.9rem;
+	}
+}

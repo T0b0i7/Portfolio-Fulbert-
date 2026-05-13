@@ -63,3 +63,28 @@
 		gap: 0.5rem;
 	}
 }
+
+@media screen and (max-width: 480px) {
+	.tech-stack {
+		padding: 1rem;
+	}
+	
+	.tech-row {
+		gap: 0.3rem;
+		justify-content: center;
+	}
+	
+	.tech-stack p {
+		font-size: 1rem;
+	}
+	
+	.glow-box {
+		height: 3rem;
+		width: 3rem;
+	}
+	
+	.glow-box > svg {
+		width: 45%;
+		height: 45%;
+	}
+}

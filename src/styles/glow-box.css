@@ -113,3 +113,20 @@
 		padding: 0.15rem 0.5rem;
 	}
 }
+
+@media screen and (max-width: 480px) {
+	.glow-box {
+		height: 3rem;
+		width: 3rem;
+	}
+
+	.glow-box-title {
+		font-size: 0.7rem;
+		padding: 0.1rem 0.4rem;
+	}
+	
+	.glow-box > svg {
+		width: 45%;
+		height: 45%;
+	}
+}

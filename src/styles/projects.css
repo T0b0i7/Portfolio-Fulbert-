@@ -157,3 +157,36 @@
 		padding: 5px 10px;
 	}
 }
+
+@media (max-width: 480px) {
+	.projects {
+		padding: 40px 10px;
+	}
+	
+	.projects-grid {
+		gap: 15px;
+	}
+	
+	.project-card {
+		padding: 12px;
+	}
+	
+	.project-header h3 {
+		font-size: 1.1rem;
+	}
+	
+	.project-description {
+		font-size: 0.85rem;
+		line-height: 1.5rem;
+	}
+	
+	.tech-tag {
+		font-size: 0.7rem;
+		padding: 4px 8px;
+	}
+	
+	.project-link {
+		width: 28px;
+		height: 28px;
+	}
+}
