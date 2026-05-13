@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import '../styles/mobile-notification.css';
 
 export const MobileNotification = () => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -9,10 +8,18 @@ export const MobileNotification = () => {
 		// Vérifier si on est sur mobile
 		const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
 			navigator.userAgent
-		) || window.innerWidth <= 768;
+		) || (typeof window !== 'undefined' && window.innerWidth <= 768);
 
 		// Vérifier si l'utilisateur a déjà dismissé la notification
-		const dismissed = localStorage.getItem('mobileNotificationDismissed');
+		let dismissed = false;
+		try {
+			if (typeof localStorage !== 'undefined') {
+				dismissed = localStorage.getItem('mobileNotificationDismissed') === 'true';
+			}
+		} catch (e) {
+			// localStorage unavailable
+		}
+
 		const shouldShow = isMobile && !dismissed;
 
 		if (shouldShow) {
@@ -27,12 +34,17 @@ export const MobileNotification = () => {
 
 	const handleDismiss = () => {
 		setIsVisible(false);
-		localStorage.setItem('mobileNotificationDismissed', 'true');
+		try {
+			if (typeof localStorage !== 'undefined') {
+				localStorage.setItem('mobileNotificationDismissed', 'true');
+			}
+		} catch (e) {
+			// ignore
+		}
 		setTimeout(() => setIsDismissed(true), 300);
 	};
 
 	const handleGoToPC = () => {
-		// Optionnel: rediriger ou juste fermer
 		handleDismiss();
 	};
 
@@ -72,6 +84,7 @@ export const MobileNotification = () => {
 						className='notification-btn dismiss'
 						onClick={handleDismiss}
 						aria-label='Fermer'
+						type='button'
 					>
 						<svg
 							width='20'
@@ -88,6 +101,7 @@ export const MobileNotification = () => {
 					<button
 						className='notification-btn pc'
 						onClick={handleGoToPC}
+						type='button'
 					>
 						<span>
 							<svg
