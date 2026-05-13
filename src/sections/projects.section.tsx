@@ -7,7 +7,7 @@ export const Projects = () => {
 			className='projects container'
 			id='projects'
 		>
-			<div style={{ marginBottom: '40px' }}>
+			<div style={{ marginBottom: '40px', textAlign: 'center' }}>
 				<SectionTitle
 					title='Mes'
 					subTitle='PROJETS'

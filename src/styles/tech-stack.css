@@ -37,6 +37,69 @@
 	font-family: 'Fugaz One', sans-serif;
 }
 
+.tech-grid p {
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: var(--text);
+	margin: 1.5rem 0 1rem;
+	letter-spacing: 0.05rem;
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+	padding: 0.5rem 1.5rem;
+}
+
+.tech-grid p::before,
+.tech-grid p::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	width: 30px;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, rgb(var(--primary)), transparent);
+}
+
+.tech-grid p::before {
+	left: -10px;
+}
+
+.tech-grid p::after {
+	right: -10px;
+}
+
+@media (min-width: 481px) and (max-width: 700px) {
+	.tech-grid p {
+		font-size: 1.2rem;
+		padding: 0.4rem 1.2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.tech-grid p {
+		font-size: 1.1rem;
+		margin: 1rem 0 0.8rem;
+		padding: 0.3rem 1rem;
+	}
+	
+	.tech-grid p::before,
+	.tech-grid p::after {
+		width: 20px;
+	}
+}
+
+@media (max-width: 400px) {
+	.tech-grid p {
+		font-size: 1rem;
+		margin: 0.8rem 0 0.6rem;
+		padding: 0.2rem 0.8rem;
+	}
+	
+	.tech-grid p::before,
+	.tech-grid p::after {
+		display: none;
+	}
+}
+
 @media (min-width: 481px) and (max-width: 700px) {
 	.tech-stack {
 		padding: 1rem 2rem;

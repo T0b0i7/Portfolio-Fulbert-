@@ -89,78 +89,61 @@
 	transform: translateY(4px);
 }
 
-/* Small Mobile (up to 480px) */
-@media (max-width: 480px) {
+.hero-section {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 2.5rem;
+	position: relative;
+	text-align: center;
+	padding: 0 20px;
+}
+
+.hero-section .name {
+	font-size: 7rem;
+	color: rgb(31, 195, 255);
+	line-height: 1.1;
+	word-break: break-word;
+	max-width: 100%;
+	text-shadow: 0 0 30px rgba(31, 195, 255, 0.3);
+}
+
+/* Medium Phones */
+@media screen and (max-width: 480px) {
 	.hero-section {
 		font-size: 1.5rem;
 		justify-content: flex-start;
-		padding-top: 80px;
+		padding-top: 100px;
 	}
 	
 	.hero-section .name {
-		font-size: 2.2rem;
+		font-size: 2.5rem;
+		letter-spacing: 2px;
 		word-break: break-word;
-		letter-spacing: 1px;
 	}
 	
 	.hero-section > p {
 		font-size: 1.2rem;
 		margin: 5px 0;
 	}
-	
-	.bottom-bar {
-		bottom: 15px;
-		gap: 3px;
-		position: relative;
-		margin-top: 20px;
-	}
-	
-	.github-ribbon {
-		width: 200px;
-		height: 40px;
-		top: 0;
-		right: -45%;
-		transform: rotate(45deg) translate(50%, 150%);
-	}
-	
-	.github-ribbon div {
-		font-size: 0.65rem;
-	}
 }
 
-/* Extra Small Mobile (320px - 380px) */
-@media (max-width: 380px) {
+/* Small Phones */
+@media screen and (max-width: 380px) {
 	.hero-section {
 		font-size: 1.3rem;
 		padding: 0 10px;
-		padding-top: 70px;
+		padding-top: 90px;
 	}
 	
 	.hero-section .name {
-		font-size: 1.8rem;
+		font-size: 2rem;
+		letter-spacing: 1px;
 	}
 	
-	.bottom-bar {
-		gap: 2px;
-	}
-	
-	.bottom-bar a {
-		width: 28px;
-		height: 28px;
-	}
-	
-	.github-ribbon {
-		display: none;
-	}
-}
-
-/* Medium Mobile & Small Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-	.hero-section .name {
-		font-size: 3rem;
-	}
-	
-	.hero-section {
-		font-size: 1.8rem;
+	.hero-section > p {
+		font-size: 1rem;
 	}
 }

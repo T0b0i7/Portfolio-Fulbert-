@@ -5,9 +5,15 @@ import { techStack } from '../data/portfolio';
 export const TechStack = () => {
 	return (
 		<section
-			className='tech-stack'
+			className='tech-stack container'
 			id='tech-stack'
 		>
+			<div style={{ marginBottom: '60px', textAlign: 'center' }}>
+				<SectionTitle
+					title={techStack.section.title}
+					subTitle={techStack.section.subtitle}
+				/>
+			</div>
 			<div className='tech-grid'>
 				{techStack.groups.map((group, idx) => (
 					<div key={idx}>
@@ -24,12 +30,6 @@ export const TechStack = () => {
 						</div>
 					</div>
 				))}
-			</div>
-			<div>
-				<SectionTitle
-					title={techStack.section.title}
-					subTitle={techStack.section.subtitle}
-				/>
 			</div>
 		</section>
 	);
