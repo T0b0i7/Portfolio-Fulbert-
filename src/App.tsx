@@ -5,6 +5,7 @@ import { InfoSection } from './sections/info.section';
 import { TechStack } from './sections/tech-stack.section';
 import { Projects } from './sections/projects.section';
 import { Contact } from './sections/contact.section';
+import { MobileNotification } from './components/mobile-notification';
 import './styles/about-me.css';
 import './styles/floating-button.css';
 import './styles/glow-box.css';
@@ -19,6 +20,7 @@ import './styles/contact.css';
 import './styles/responsive.css';
 import './styles/mobile-optimizations.css';
 import './styles/mobile-fixes.css';
+import './styles/mobile-notification.css';
 
 function App() {
 	return (
@@ -30,6 +32,7 @@ function App() {
 			<Projects />
 			<TechStack />
 			<Contact />
+			<MobileNotification />
 		</>
 	);
 }
