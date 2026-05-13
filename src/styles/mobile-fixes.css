@@ -1,0 +1,173 @@
+/* ==========================================
+   MOBILE FIXES - OVERFLOW & STRUCTURE
+   ========================================== */
+
+/* Fix any potential overflow */
+body {
+	overflow-x: hidden !important;
+}
+
+/* Ensure all containers respect viewport */
+* {
+	box-sizing: border-box;
+}
+
+/* Fix glow-box parent overflow */
+@media (max-width: 768px) {
+	.glow-box-parent {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 100%;
+	}
+}
+
+/* Ensure project cards don't overflow */
+@media (max-width: 768px) {
+	.project-card {
+		max-width: 100%;
+		width: 100%;
+		min-width: 0;
+	}
+}
+
+/* Ensure contact form fits on mobile */
+@media (max-width: 480px) {
+	.contact-form {
+		padding: 15px !important;
+		margin: 0 -5px;
+	}
+	
+	.form-group {
+		margin-bottom: 15px;
+	}
+	
+	input, textarea {
+		max-width: 100%;
+		min-width: 0;
+	}
+}
+
+/* Tech stack wrapping on very small screens */
+@media (max-width: 400px) {
+	.tech-row {
+		justify-content: center !important;
+		margin: 10px 0;
+	}
+	
+	.glow-box-parent {
+		margin: 5px;
+	}
+}
+
+/* Prevent overflow from titles */
+@media (max-width: 480px) {
+	.title .primary-text,
+	.title .secondary-text {
+		word-break: break-word;
+		hyphens: auto;
+		overflow-wrap: break-word;
+	}
+}
+
+/* About Me timeline overflow fix */
+@media (max-width: 480px) {
+	.timeline {
+		padding-left: 1.5rem !important;
+		overflow: visible;
+	}
+	
+	.timeline-item::before {
+		left: -35px !important;
+	}
+	
+	.timeline-list {
+		padding-left: 1rem !important;
+	}
+}
+
+/* Hero section name overflow */
+@media (max-width: 380px) {
+	.hero-section .name {
+		word-break: break-word;
+		line-height: 1.1;
+		letter-spacing: 0;
+	}
+}
+
+/* Contact info items - prevent overflow */
+@media (max-width: 480px) {
+	.contact-item p {
+		word-break: break-word;
+	}
+}
+
+/* Project tech tags - wrap properly */
+@media (max-width: 480px) {
+	.project-tech {
+		justify-content: flex-start;
+	}
+}
+
+/* Ensure sections stack properly */
+@media (max-width: 768px) {
+	.about-me,
+	.projects,
+	.tech-stack,
+	.contact {
+		flex-direction: column;
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+/* Fix floating button positioning on very small screens */
+@media (max-width: 380px) {
+	.floating-btn.first {
+		left: 45% !important;
+	}
+	
+	.floating-btn.sec {
+		right: 45% !important;
+	}
+}
+
+/* Bottom bar scrollable if many icons */
+@media (max-width: 480px) {
+	.bottom-bar {
+		overflow-x: auto;
+		max-width: 90vw;
+		justify-content: flex-start;
+		padding: 0 10px;
+	}
+	
+	.bottom-bar a {
+		flex-shrink: 0;
+	}
+}
+
+/* Ensure form inputs fit */
+@media (max-width: 400px) {
+	input,
+	textarea {
+		padding: 10px !important;
+		font-size: 14px !important;
+	}
+}
+
+/* Prevent footer/header overlap on mobile */
+@media (max-width: 768px) {
+	section {
+		margin-bottom: 0;
+	}
+}
+
+/* Ensure proper spacing on iPhone notch devices */
+@supports (padding: max(0px)) {
+	@media (max-width: 768px) {
+		.hero-section {
+			padding-left: max(15px, env(safe-area-inset-left));
+			padding-right: max(15px, env(safe-area-inset-right));
+		}
+	}
+}

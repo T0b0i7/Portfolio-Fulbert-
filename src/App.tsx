@@ -16,6 +16,9 @@ import './styles/text-hover.css';
 import './styles/title.css';
 import './styles/projects.css';
 import './styles/contact.css';
+import './styles/responsive.css';
+import './styles/mobile-optimizations.css';
+import './styles/mobile-fixes.css';
 
 function App() {
 	return (

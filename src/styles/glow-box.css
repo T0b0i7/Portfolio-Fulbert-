@@ -102,7 +102,26 @@
 	}
 }
 
-@media screen and (max-width: 700px) {
+.glow-box-title {
+	position: absolute;
+	top: 0;
+	font-size: 0.9rem;
+	padding: 0.2rem 0.7rem;
+	white-space: nowrap;
+	color: var(--text-reverse);
+	border-radius: 50px;
+	background-color: var(--background-reverse);
+	box-shadow:
+		0 15px 35px rgba(50, 50, 93, 0.1),
+		0 5px 15px rgba(0, 0, 0, 0.07);
+	pointer-events: none;
+	user-select: none;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+	z-index: 10;
+}
+
+@media (max-width: 700px) {
 	.glow-box {
 		height: 3.5rem;
 		width: 3.5rem;
@@ -114,7 +133,7 @@
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 	.glow-box {
 		height: 3rem;
 		width: 3rem;
@@ -123,10 +142,40 @@
 	.glow-box-title {
 		font-size: 0.7rem;
 		padding: 0.1rem 0.4rem;
+		top: -40%;
 	}
 	
 	.glow-box > svg {
 		width: 45%;
 		height: 45%;
+	}
+}
+
+@media (max-width: 400px) {
+	.glow-box {
+		height: 2.8rem;
+		width: 2.8rem;
+	}
+
+	.glow-box-title {
+		font-size: 0.65rem;
+		padding: 0.1rem 0.3rem;
+	}
+	
+	.glow-box::before {
+		height: 60%;
+		width: 60%;
+	}
+	
+	.glow-box::after {
+		height: 35%;
+		width: 35%;
+	}
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+	.glow-box-title {
+		display: none;
 	}
 }

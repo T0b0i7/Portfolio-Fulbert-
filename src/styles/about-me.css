@@ -178,7 +178,11 @@
 		font-size: 1.5rem;
 	}
 	
-	.timeline > ul {
+	.timeline-item {
+		margin-bottom: 1rem;
+	}
+	
+	.timeline-list {
 		padding-left: 1.5rem;
 	}
 	
@@ -186,5 +190,30 @@
 		left: -40px;
 		width: 12px;
 		height: 12px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.about-me {
+		padding: 1rem;
+	}
+	
+	.about-me .intro p {
+		font-size: 0.9rem;
+		line-height: 1.5rem;
+	}
+	
+	.timeline .designation {
+		font-size: 0.9rem;
+	}
+	
+	.timeline > h1 {
+		font-size: 1.3rem;
+	}
+	
+	.timeline-item::before {
+		left: -35px;
+		width: 10px;
+		height: 10px;
 	}
 }

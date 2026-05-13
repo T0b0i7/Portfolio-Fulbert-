@@ -78,10 +78,6 @@
 	color: var(--accentFg);
 }
 
-.floating-btn.sec > span {
-	background-color: var(--accentHi);
-}
-
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
 	.floating-btn.first {
@@ -129,5 +125,21 @@
 	.floating-btn span {
 		width: 70px;
 		height: 40px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.floating-btn, .floating-btn div {
+		height: 38px;
+		width: 100px;
+	}
+	
+	.floating-btn div {
+		font-size: 0.7rem;
+	}
+	
+	.floating-btn span {
+		width: 60px;
+		height: 35px;
 	}
 }

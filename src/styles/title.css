@@ -32,6 +32,7 @@
 	-webkit-text-stroke-color: hsl(196, 100%, 56%);
 }
 
+/* Small Tablets & Large Phones */
 @media screen and (max-width: 700px) {
 	:root {
 		--text-primary: 5rem;
@@ -40,9 +41,11 @@
 	.title {
 		position: relative;
 		top: 0rem;
+		margin-bottom: 1rem;
 	}
 }
 
+/* Mobile Phones */
 @media screen and (max-width: 480px) {
 	:root {
 		--text-primary: 3.5rem;
@@ -51,14 +54,59 @@
 	
 	.title {
 		padding: 0.5rem;
+		margin: 0;
 	}
 	
 	.title .primary-text {
-		margin-bottom: 1.5rem;
+		margin-bottom: 1rem;
 	}
 	
 	.title .secondary-text {
 		-webkit-text-stroke-width: 2px;
+		text-align: center;
+	}
+}
+
+/* Small Phones */
+@media screen and (max-width: 400px) {
+	:root {
+		--text-primary: 2.8rem;
+		--text-secondary: 3.5rem;
+	}
+	
+	.title .primary-text {
+		margin-bottom: 0.8rem;
+	}
+	
+	.title .primary-text,
+	.title .secondary-text {
+		letter-spacing: 0;
+	}
+}
+
+/* Very Small Phones */
+@media screen and (max-width: 350px) {
+	:root {
+		--text-primary: 2.2rem;
+		--text-secondary: 2.8rem;
+	}
+	
+	.title {
+		padding: 0.25rem;
+	}
+}
+
+/* Landscape Mobile */
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	.title {
+		position: relative;
+		top: 0;
+		margin: 0.5rem 0;
+	}
+	
+	:root {
+		--text-primary: 3rem;
+		--text-secondary: 3.8rem;
 	}
 }
 

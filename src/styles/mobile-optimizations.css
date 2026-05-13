@@ -1,0 +1,260 @@
+/* ==========================================
+   MOBILE-SPECIFIC HIDE/SHOW CONTROLS
+   ========================================== */
+
+/* Hide mouse trail on mobile/tablet */
+@media (max-width: 768px) {
+	.mouse-trail-container {
+		display: none !important;
+	}
+}
+
+/* Hide scroll bar on mobile but keep functionality */
+@media (max-width: 768px) {
+	.scroll-bar-container {
+		opacity: 0.3;
+		width: 4px;
+	}
+}
+
+/* Show mobile menu indicator if needed (future feature) */
+@media (max-width: 768px) {
+	.mobile-menu-toggle {
+		display: flex;
+	}
+}
+
+/* Desktop-only elements */
+@media (max-width: 1024px) {
+	.desktop-only {
+		display: none !important;
+	}
+}
+
+/* Mobile-only elements */
+@media (min-width: 1025px) {
+	.mobile-only {
+		display: none !important;
+	}
+}
+
+/* Adjust section spacing on mobile */
+@media (max-width: 768px) {
+	section {
+		padding-top: 60px !important;
+		padding-bottom: 60px !important;
+	}
+}
+
+@media (max-width: 480px) {
+	section {
+		padding-top: 40px !important;
+		padding-bottom: 40px !important;
+	}
+}
+
+/* Force GPU acceleration for smooth mobile animations */
+@media (max-width: 768px) {
+	.project-card,
+	.contact-item,
+	.glow-box,
+	.floating-btn div {
+		transform: translateZ(0);
+		will-change: transform;
+	}
+}
+
+/* Reduce animations on low-end mobile */
+@media (max-width: 480px) and (prefers-reduced-motion: reduce) {
+	.project-card,
+	.contact-item,
+	.glow-box {
+		transition: none !important;
+		animation: none !important;
+	}
+}
+
+/* Ensure tap highlight color is transparent */
+a, button {
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent text selection on UI elements */
+.floating-btn,
+.project-link,
+.glow-link,
+.submit-btn {
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Allow text selection for actual content */
+p, li, .contact-item p, .project-description {
+	user-select: text;
+	-webkit-user-select: text;
+}
+
+/* Optimize scroll performance */
+@media (max-width: 768px) {
+	.about-me,
+	.projects,
+	.tech-stack,
+	.contact {
+		-webkit-overflow-scrolling: touch;
+		scroll-behavior: smooth;
+	}
+}
+
+/* Fix 100vh on mobile browsers */
+@supports (height: 100dvh) {
+	.hero-section,
+	.about-me,
+	.projects,
+	.tech-stack,
+	.contact {
+		min-height: 100dvh;
+	}
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+	.hero-section {
+		min-height: 100dvh;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding-top: 20px;
+	}
+	
+	.hero-section .name {
+		font-size: 2rem !important;
+	}
+	
+	.bottom-bar {
+		position: relative;
+		bottom: auto;
+		margin-top: auto;
+	}
+	
+	.floating-btn.first {
+		position: relative;
+		top: auto !important;
+		left: auto !important;
+		transform: none !important;
+		margin: 10px 0;
+	}
+	
+	.floating-btn.sec {
+		position: relative;
+		bottom: auto !important;
+		right: auto !important;
+		transform: none !important;
+		margin: 10px 0;
+	}
+}
+
+/* Ensure inputs are readable on mobile */
+@media (max-width: 480px) {
+	input,
+	textarea,
+	select {
+		font-size: 16px !important; /* Prevents zoom on iOS */
+		line-height: 1.5;
+	}
+}
+
+/* Prevent viewport zoom on input focus for iOS */
+@supports (-webkit-touch-callout: none) {
+	input,
+	textarea,
+	select {
+		font-size: 16px;
+	}
+}
+
+/* High DPI / Retina displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+	/* Ensure crisp text rendering */
+	* {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
+/* Tablet hover support */
+@media (hover: hover) and (pointer: fine) and (max-width: 1024px) {
+	.project-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.glow-box:hover {
+		transform: scale(1.05);
+	}
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) and (pointer: coarse) {
+	.project-card:hover,
+	.glow-box:hover,
+	.contact-item:hover,
+	.floating-btn:hover > div {
+		transform: none !important;
+		box-shadow: none !important;
+	}
+}
+
+/* Loading state for images (future images) */
+img {
+	loading: lazy;
+}
+
+/* Focus visible for accessibility */
+@media (prefers-reduced-motion: no-preference) {
+	*:focus-visible {
+		outline: 2px solid var(--primary);
+		outline-offset: 2px;
+	}
+}
+
+/* Ensure minimum touch target size (44x44 recommended) */
+@media (max-width: 768px) {
+	button,
+	.floating-btn,
+	.project-link,
+	.glow-link,
+	.submit-btn,
+	a {
+		min-width: 44px;
+		min-height: 44px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* Fix fixed position elements on mobile */
+@media (max-width: 768px) {
+	.floating-btn {
+		position: fixed;
+	}
+	
+	.scroll-bar {
+		position: fixed;
+	}
+}
+
+/* Ensure z-index stacking is correct on mobile */
+@media (max-width: 768px) {
+	.hero-section {
+		position: relative;
+		z-index: 1;
+	}
+	
+	.floating-btn {
+		z-index: 100;
+	}
+	
+	.github-ribbon {
+		z-index: 9999;
+	}
+}

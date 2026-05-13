@@ -37,7 +37,7 @@
 	font-family: 'Fugaz One', sans-serif;
 }
 
-@media screen and (max-width: 700px) {
+@media (min-width: 481px) and (max-width: 700px) {
 	.tech-stack {
 		padding: 1rem 2rem;
 		flex-direction: column-reverse;
@@ -64,9 +64,14 @@
 	}
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 480px) {
 	.tech-stack {
 		padding: 1rem;
+		min-height: auto;
+	}
+	
+	.tech-stack > div {
+		padding: 0.3rem;
 	}
 	
 	.tech-row {
@@ -76,6 +81,7 @@
 	
 	.tech-stack p {
 		font-size: 1rem;
+		text-align: center;
 	}
 	
 	.glow-box {
@@ -83,8 +89,47 @@
 		width: 3rem;
 	}
 	
+	.glow-box-title {
+		font-size: 0.65rem;
+	}
+	
 	.glow-box > svg {
 		width: 45%;
 		height: 45%;
+	}
+	
+	.tech-grid {
+		gap: 1.5rem;
+	}
+}
+
+@media (max-width: 400px) {
+	.tech-stack {
+		padding: 0.8rem 0.5rem;
+	}
+	
+	.tech-row {
+		gap: 0.2rem;
+		margin: 10px 0;
+	}
+	
+	.glow-box {
+		height: 2.8rem;
+		width: 2.8rem;
+	}
+	
+	.tech-grid {
+		gap: 1rem;
+	}
+}
+
+@media (max-width: 360px) {
+	.tech-stack p {
+		font-size: 0.9rem;
+	}
+	
+	.glow-box {
+		height: 2.5rem;
+		width: 2.5rem;
 	}
 }
